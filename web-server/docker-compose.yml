@@ -1,0 +1,13 @@
+# Building the dockerfile in the current directory.
+services:
+  # Name of the service container. e.g. "web", "db" or "app"
+  web-server:
+    build: 
+      context: .
+      # Dockerfile name. Default is "Dockerfile"
+      dockerfile: Dockerfile
+    # Port mapping between the host and the container.
+    volumes:
+      - .:/app
+    ports:
+      - "80:80"
