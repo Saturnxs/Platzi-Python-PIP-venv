@@ -1,0 +1,8 @@
+# Building the dockerfile in the current directory.
+services:
+  # Name of the service container. e.g. "web", "db" or "app"
+  app-csv:
+    build: 
+      context: .
+      # Dockerfile name. Default is "Dockerfile"
+      dockerfile: Dockerfile

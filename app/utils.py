@@ -1,4 +1,4 @@
-text = 'Hello world!'
+import pandas as pd
 
 def get_population(country_dict):
     population_dict = {
@@ -16,4 +16,5 @@ def get_population(country_dict):
 
 
 def population_by_country(data, country):
-    return list(filter(lambda item: item['Country/Territory'] == country, data))
+    return data[data['Country/Territory'] == country]
+    # return list(filter(lambda item: item['Country/Territory'] == country, data))
