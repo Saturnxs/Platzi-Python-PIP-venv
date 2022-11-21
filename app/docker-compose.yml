@@ -6,3 +6,6 @@ services:
       context: .
       # Dockerfile name. Default is "Dockerfile"
       dockerfile: Dockerfile
+    # Port mapping between the host and the container.
+    volumes:
+      - .:/app
